@@ -33,6 +33,7 @@ class Postform extends Component {
             },
             body: JSON.stringify(post)
         })
+        
         .then(res => res.json())
         .then(data => console.log(data.id));
     }
