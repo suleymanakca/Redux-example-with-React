@@ -1,8 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+It is an example that gets data from API, stored them using Redux<br>
+gives the option to submit and re-render the list. 
 
 Before you run:
 
 ### `install i  redux react-redux redux-thunk`
+
+And visit the https://jsonplaceholder.typicode.com
 
 In the project directory, you can run:
 
