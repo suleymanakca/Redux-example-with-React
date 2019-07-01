@@ -19,4 +19,6 @@ You will also see any lint errors in the console.
 
 If you want to use Redux Devtools as a Chrome extension
 
-### `npm install --save-dev remote-redux-devtools`
+### `npm install --save-dev remote-redux-devtools`<br>
+
+I kept going with the Brad Traversy'course.
