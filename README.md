@@ -1,4 +1,4 @@
-It is an example that gets data from API, stored them using Redux<br>
+It is an example that it gets data from API, stored them using Redux<br>
 gives the option to submit and re-render the list. 
 
 Before you run:
