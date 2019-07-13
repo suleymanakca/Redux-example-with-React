@@ -8,7 +8,8 @@ const initialState = {
 export default function(state = initialState, action){
     switch(action.type) {
         case FETCH_POSTS: 
-            return {
+            return {    //Reducerlar bu noktada store’a gelen action’a göre 
+                        //uygulamanın state’inin nasıl değiştireceğini belirler ve store’a gönderir.
                 ...state,
                 items: action.payload
             };

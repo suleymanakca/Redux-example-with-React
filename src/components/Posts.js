@@ -5,18 +5,19 @@ import { fetchPosts} from '../actions/postActions'
 
 
 class Posts extends Component {
-    componentWillMount(){
+    componentDidMount(){
         this.props.fetchPosts();
     }
     
 
     componentWillReceiveProps(nextProps){
         if(nextProps.newPost){
-            this.props.posts.unshift(nextProps.newPost);
+            this.props.postsToComponent.unshift(nextProps.newPost); 
+            // add to the beginning
         }
     }
     render() {
-        const postItems = this.props.posts.map(post => (
+        const postItems = this.props.postsToComponent.map(post => (
             <div key={post.id}>
                 <h3>{post.title}</h3>
                 <p>{post.body}</p>
@@ -37,7 +38,9 @@ Posts.propTypes = {
     mewPost: PropTypes.object
 }
  const mapStateToProps = state => ({
-     posts: state.posts.items,
+    //mapStateToProps map’leme işlemi yaparak state’imizde o anda ne varsa
+    //onu component’iniz içerisinde props olarak kullanmamızı sağlar
+     postsToComponent: state.posts.items, //'posts' of root reducer
      newPost: state.posts.item
  });
 export default connect(mapStateToProps, { fetchPosts })(Posts);

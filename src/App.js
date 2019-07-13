@@ -8,7 +8,7 @@ import store from './store';
 class App extends Component {
     render(){
      return (
-        <Provider store={store} >
+        <Provider store={store} /* holds the whole state tree */ >
           <div className="App">
             <Postform/>
             <hr/>

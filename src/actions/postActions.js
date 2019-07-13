@@ -4,14 +4,14 @@ export const fetchPosts = () => dispatch => {
         fetch('https://jsonplaceholder.typicode.com/posts')
             .then(res => res.json())
             .then(posts => 
-                dispatch({
+                dispatch({ // dispatch = payload'ı store'a sevk etmek
                     type: FETCH_POSTS,
                     payload: posts
             })
     );
 };
 
-export const createPost = (postData) => dispatch => {
+export const createPost = postData => dispatch => {
 
     fetch('http://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
@@ -20,10 +20,11 @@ export const createPost = (postData) => dispatch => {
         },
         body: JSON.stringify(postData)
     })
-    
-    .then(res => res.json())
-    .then(post => dispatch({
-        type: NEW_POST,
-        payload: post
-}));
+        .then(res => res.json())
+        .then(post => 
+            dispatch({
+            type: NEW_POST,
+            payload: post
+            })
+        );
 };
